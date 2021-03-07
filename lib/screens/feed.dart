@@ -1,5 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
+import 'package:ifs_network/screens/tirar_glow.dart';
+
 import 'package:provider/provider.dart';
 import 'package:flutter/services.Dart';
 
@@ -11,6 +14,7 @@ class Feed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> scaffoldkey = GlobalKey<ScaffoldState>();
+
 
     UsuarioGerenciador usuarioGerenciador = Provider.of(context);
     return Scaffold(
@@ -66,6 +70,7 @@ class Feed extends StatelessWidget {
                                   }
                                 });
                           },
+
                         ),
                       );
                   },

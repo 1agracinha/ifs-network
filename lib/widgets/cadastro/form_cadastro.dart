@@ -160,6 +160,7 @@ class FormCadastro extends StatelessWidget {
                       'Já tem uma conta?',
                       style: TextStyle(color: Theme.of(context).primaryColor),
                     )),
+
               )
             ],
           ),

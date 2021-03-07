@@ -32,6 +32,7 @@ class ConteudoPerfil extends StatelessWidget {
                       Get.back();
                     }),
                 Text(' '),
+
                 usuarioProprietario
                     ? Container(
                         margin: EdgeInsets.only(right: 10),
@@ -103,6 +104,7 @@ class ConteudoPerfil extends StatelessWidget {
                                                   ),
                                                 )
                                               ],
+
                                             ),
                                           )
                                         ],
@@ -112,6 +114,7 @@ class ConteudoPerfil extends StatelessWidget {
                         ),
                       )
                     : Container(),
+
               ],
             ),
           ),

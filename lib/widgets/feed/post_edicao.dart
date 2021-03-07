@@ -27,6 +27,8 @@ class PostEdicao extends StatefulWidget {
 
 class _PostEdicaoState extends State<PostEdicao> {
   bool _expanded = false;
+
+  bool clicou = false;
   CollectionReference postagens =
       FirebaseFirestore.instance.collection('postagens');
 
@@ -196,20 +198,29 @@ class _PostEdicaoState extends State<PostEdicao> {
                               )),
                           Divider(),
                           Container(
+
                             margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+
                             child: Column(children: [
                               Align(
                                   alignment: Alignment.bottomLeft,
                                   child: Container(
-                                    height: MediaQuery.of(context).size.height *
-                                        0.4,
+                                    height: MediaQuery.of(context).size.height * 0.5,
                                     child: TextFormField(
                                       decoration: InputDecoration(
                                         hintText: widget.postMap['texto'],
+                                        border: InputBorder.none,
+                                        focusedBorder: InputBorder.none,
                                       ),
                                       onTap: () {
-                                        widget.textoPostController.text =
-                                            widget.postMap['texto'];
+                                        clicou
+                                            ? null
+                                            : widget.textoPostController.text =
+                                                widget.postMap['texto'];
+                                        setState(() {
+                                          _expanded = true;
+                                          clicou = true;
+                                        });
                                       },
                                       maxLength: 1000,
                                       expands: true,

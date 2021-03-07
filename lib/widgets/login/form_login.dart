@@ -128,6 +128,7 @@ class _FormLoginState extends State<FormLogin> {
                                       duration: Duration(milliseconds: 600),
                                     ));
                                     Get.off(Home(), transition: Transition.downToUp, duration: Duration(milliseconds: 300))
+
                                     ;
                                   });
                             }

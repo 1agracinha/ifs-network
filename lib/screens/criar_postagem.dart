@@ -79,6 +79,7 @@ class _CriarPostagemState extends State<CriarPostagem> {
                 'Criar Postagem',
                 style: TextStyle(color: Colors.teal),
               ))),
+
           body: Stack(
             children: [
               Container(
