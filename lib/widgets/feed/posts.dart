@@ -94,9 +94,12 @@ class _PostsState extends State<Posts> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Get.to(Perfil(
-                              usuario: widget.usuario,
-                              id_usuario: widget.postMap['id_usuario']));
+                          Get.to(
+                              Perfil(
+                                  usuario: widget.usuario,
+                                  id_usuario: widget.postMap['id_usuario']),
+                              transition: Transition.zoom,
+                              duration: Duration(milliseconds: 500));
                         },
                         child: Row(
                           children: [
@@ -196,7 +199,9 @@ class _PostsState extends State<Posts> {
                       ),
                       onTap: () {
                         Get.to(
-                            ComentariosScreen(docPostagem: widget.docPostagem));
+                            ComentariosScreen(docPostagem: widget.docPostagem),
+                            transition: Transition.zoom,
+                            duration: Duration(milliseconds: 500));
                       },
                     ),
                   ),

@@ -32,7 +32,8 @@ class MenuSuspenso extends StatelessWidget {
                       Get.to(Perfil(
                         usuario: usuario,
                         id_usuario: usuarioGerenciador.auth.currentUser.uid,
-                      ));
+                      ), transition: Transition.upToDown, duration: Duration(milliseconds: 500));
+
                     }),
                 Text("Perfil",
                     style: TextStyle(

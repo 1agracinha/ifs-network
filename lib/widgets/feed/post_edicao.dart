@@ -27,6 +27,7 @@ class PostEdicao extends StatefulWidget {
 
 class _PostEdicaoState extends State<PostEdicao> {
   bool _expanded = false;
+
   bool clicou = false;
   CollectionReference postagens =
       FirebaseFirestore.instance.collection('postagens');
@@ -197,8 +198,9 @@ class _PostEdicaoState extends State<PostEdicao> {
                               )),
                           Divider(),
                           Container(
-                            margin: EdgeInsets.fromLTRB(10, 2, 10, 5),
-                            padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+
+                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+
                             child: Column(children: [
                               Align(
                                   alignment: Alignment.bottomLeft,

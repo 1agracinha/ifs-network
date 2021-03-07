@@ -73,18 +73,13 @@ class _CriarPostagemState extends State<CriarPostagem> {
         return Scaffold(
           key: scaffoldkey,
           appBar: AppBar(
-            leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            color: Theme.of(context).primaryColor,
-            onPressed: () => Get.back()),
               backgroundColor: Colors.white,
               title: Center(
                   child: Text(
                 'Criar Postagem',
                 style: TextStyle(color: Colors.teal),
-              ),)
-              
-              ,),
+              ))),
+
           body: Stack(
             children: [
               Container(
@@ -99,8 +94,8 @@ class _CriarPostagemState extends State<CriarPostagem> {
                           getImageGallery();
                         }),
                     Container(
-                      width: imagemNull() ? 0 : 100,
-                      height:  imagemNull() ? 0 : 60,
+                      width: 100,
+                      height: 60,
                       padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
                       child: imagemNull() ? Container() : Image.file(_image),
                       decoration: BoxDecoration(
@@ -111,7 +106,6 @@ class _CriarPostagemState extends State<CriarPostagem> {
                         ),
                       ),
                     ),
-                  
                     IconButton(
                         icon: Icon(Icons.add_a_photo,
                             color: Colors.teal, size: 45),

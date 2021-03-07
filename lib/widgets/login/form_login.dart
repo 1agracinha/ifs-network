@@ -127,10 +127,8 @@ class _FormLoginState extends State<FormLogin> {
                                       backgroundColor: Colors.green,
                                       duration: Duration(milliseconds: 600),
                                     ));
-                                    Navigator.of(context).pushAndRemoveUntil(
-                                        MaterialPageRoute(
-                                            builder: (context) => Home()),
-                                        (Route<dynamic> route) => false);
+                                    Get.off(Home(), transition: Transition.downToUp, duration: Duration(milliseconds: 300))
+
                                     ;
                                   });
                             }
@@ -180,21 +178,18 @@ class _FormLoginState extends State<FormLogin> {
                   width: MediaQuery.of(context).size.height * 0.8,
                   height: 40,
                   margin: EdgeInsets.only(top: 10),
-                  child: Hero(
-                    tag: "conta",
-                    child: RaisedButton(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(7)),
-                        onPressed: () {
-                          Get.to(Cadastro());
-                        },
-                        child: Text(
-                          'Não tem uma conta?',
-                          style:
-                              TextStyle(color: Theme.of(context).primaryColor),
-                        )),
-                  ),
+                  child: RaisedButton(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(7)),
+                      onPressed: () {
+                        Get.to(Cadastro(), transition: Transition.zoom);
+                      },
+                      child: Text(
+                        'Não tem uma conta?',
+                        style:
+                            TextStyle(color: Theme.of(context).primaryColor),
+                      )),
                 ),
               ],
             ),

@@ -8,7 +8,7 @@ SpeedDialChild criarPostBtn(String label, IconData icon, BuildContext context) {
   return SpeedDialChild(
     child: Icon(icon, color: Colors.white),
     backgroundColor: Colors.teal,
-    onTap: () => Get.to(CriarPostagem()),
+    onTap: () => Get.to(CriarPostagem(), transition: Transition.rightToLeft, duration: Duration(milliseconds: 500)),
     label: label,
     labelStyle: TextStyle(fontWeight: FontWeight.w500, color: Colors.teal[900]),
     labelBackgroundColor: Colors.teal[100],

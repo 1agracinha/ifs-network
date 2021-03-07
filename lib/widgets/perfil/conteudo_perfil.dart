@@ -32,58 +32,89 @@ class ConteudoPerfil extends StatelessWidget {
                       Get.back();
                     }),
                 Text(' '),
-                Container(
-                  margin: EdgeInsets.only(right: 10),
-                  child: GestureDetector(
-                    child: Text("Excluir perfil",
-                        style: TextStyle(color: Colors.red)),
-                    onTap: () {
-                      scaffoldkey.currentState
-                          .showBottomSheet((context) => Container(
-                                height: 200,
-                                padding: EdgeInsets.all(20),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                        "Tem certeza que deseja excluir esse perfil?"),
-                                    Container(
-                                      margin: EdgeInsets.all(20),
-                                      child: Row(
+
+                usuarioProprietario
+                    ? Container(
+                        margin: EdgeInsets.only(right: 10),
+                        child: GestureDetector(
+                          child: Text("Excluir perfil",
+                              style: TextStyle(color: Colors.red)),
+                          onTap: () {
+                            scaffoldkey.currentState
+                                .showBottomSheet((context) => Container(
+                                      height: 200,
+                                      margin:
+                                          EdgeInsets.only(left: 5, right: 5),
+                                      padding: EdgeInsets.all(20),
+                                      decoration: BoxDecoration(
+                                        color: Theme.of(context).primaryColor,
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(30),
+                                          topRight: Radius.circular(30),
+                                        ),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          GestureDetector(
-                                            child: Text("cancelar"),
-                                            onTap: () {
-                                              Get.back();
-                                            },
+                                          Text(
+                                            "Tem certeza que deseja excluir esse perfil?",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18,
+                                                color: Colors.white),
                                           ),
                                           Container(
-                                            margin: EdgeInsets.only(left: 20),
-                                            padding: EdgeInsets.only(
-                                                left: 15,
-                                                right: 15,
-                                                bottom: 10,
-                                                top: 10),
-                                            color: Colors.red,
-                                            child: GestureDetector(
-                                              child: Text("excluir"),
-                                              onTap: () {
-                                                // usuarioGerenciador.auth.currentUser.delete();
-                                              },
+                                            margin: EdgeInsets.all(20),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                GestureDetector(
+                                                  child: Text("cancelar", style: TextStyle(color: Colors.white, fontSize: 16),),
+                                                  onTap: () {
+                                                    Get.back();
+                                                  },
+                                                ),
+                                                SizedBox(
+                                                  width: 20,
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.white,
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                      Radius.circular(30),
+                                                    ),
+                                                  ),
+                                                  margin:
+                                                      EdgeInsets.only(left: 20),
+                                                  padding: EdgeInsets.only(
+                                                      left: 15,
+                                                      right: 15,
+                                                      bottom: 10,
+                                                      top: 10),
+                                                  child: GestureDetector(
+                                                    child: Text("excluir", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red)),
+                                                    onTap: () {
+                                                      // usuarioGerenciador.auth.currentUser.delete();
+                                                    },
+                                                  ),
+                                                )
+                                              ],
+
                                             ),
                                           )
                                         ],
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ));
-                    },
-                  ),
-                )
+                                    ));
+                          },
+                        ),
+                      )
+                    : Container(),
+
               ],
             ),
           ),

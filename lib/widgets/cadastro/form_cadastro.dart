@@ -149,20 +149,18 @@ class FormCadastro extends StatelessWidget {
                 margin: EdgeInsets.only(top: 10),
                 width: MediaQuery.of(context).size.height * 0.8,
                 height: 40,
-                child: Hero(
-                  tag: "conta",
-                  child: RaisedButton(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(7)),
-                      onPressed: () {
-                        Get.to(Login());
-                      },
-                      child: Text(
-                        'Já tem uma conta?',
-                        style: TextStyle(color: Theme.of(context).primaryColor),
-                      )),
-                ),
+                child: RaisedButton(
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(7)),
+                    onPressed: () {
+                      Get.to(Login(), transition: Transition.zoom);
+                    },
+                    child: Text(
+                      'Já tem uma conta?',
+                      style: TextStyle(color: Theme.of(context).primaryColor),
+                    )),
+
               )
             ],
           ),
