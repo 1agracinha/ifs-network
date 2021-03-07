@@ -1,16 +1,24 @@
-# ifs_network
+<img src="https://i.ibb.co/gPwfXCZ/ifsnetwork-green.png" alt="ifsnetwork-green" border="0" />
 
-A new Flutter project.
+> IFS NETWORK é um projeto desenvolvido pelos alunos Gracyele, Geovane e Mariely da turma 2018.2 do Curso Técnico Subsequente em Desenvolvimento de Software do IFS Campus Tobias Barreto. 
+> -  O app é feito em Flutter, Dart, Cloud Firestore, Firebase Auth e Firebase Storage;
+> - A construção do app levou em torno de 35 dias com dedicação diária de ~2h;
+>  - O projeto permite/contempla: 
+>    Login, logout, signup, profiles, feed, posts, comenters, excludes, editions, splash screen e forgot password;
+> - Contato: projeto.ifsnetwork@gmail.com.
 
-## Getting Started
+<hr/>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<table>
+  <tr>
+  <td>
+    <img src="https://github.com/1agracinha/ifs-network/blob/main/gifs/1.gif">
+  </td>
+  <td>
+    <img src="https://github.com/1agracinha/ifs-network/blob/main/gifs/2.gif">
+  </td>
+  <td>
+    <img src="https://github.com/1agracinha/ifs-network/blob/main/gifs/3.gif">  
+  </td>
+</tr>
+</table>
